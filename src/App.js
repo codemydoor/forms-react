@@ -3,16 +3,16 @@ import React, { Component } from 'react';
  class form extends Component {
   constructor(props){
     super(props);
-    this.state = {username: ' '}
+    this.state = {sentense: ' '}
   };
-  myChanges =(event)=>{this.setState({username: event.target.value})};
+  myChanges =(event)=>{this.setState({sentense: event.target.value})};
   render() {
     return (
       <div>
         <form>
-         <h1>My name is  {this.state.username} </h1>
-          <label>Full Name</label>
-          <input type = 'text' placeholder = "type name here" onChange ={this.myChanges}></input>
+         <h1> {this.state.sentense} </h1>
+          
+          <input type = 'text' placeholder = "type a sentense here" onChange ={this.myChanges}></input>
         </form>
       </div>
     
