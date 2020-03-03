@@ -10,7 +10,7 @@ import React, { Component } from 'react';
     return (
       <div>
         <form>
-         <h1> {this.state.sentense} </h1>
+         <p className ="text">{this.state.sentense} </p>
           
           <input type = 'text' placeholder = "type a sentense here" onChange ={this.myChanges}></input>
         </form>
