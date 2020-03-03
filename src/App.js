@@ -5,14 +5,22 @@ import React, { Component } from 'react';
     super(props);
     this.state = {sentense: ' '}
   };
-  myChanges =(event)=>{this.setState({sentense: event.target.value})};
+  myChanges =(event)=>{
+    this.setState({value:event.target.value})
+  }
+  submithandler =(event)=>{alert('welcome ' + this.state.value)
+  event.preventDefault();
+ };
+
+
   render() {
     return (
       <div>
-        <form>
+        <form onSubmit={this.submithandler}> 
          <p className ="text">{this.state.sentense} </p>
           
-          <input type = 'text' placeholder = "type a sentense here" onChange ={this.myChanges}></input>
+          <input type = 'text' placeholder = "type your name here" value = {this.state.value} onChange={this.myChanges} ></input>
+          <button type = 'submit' value= "submit">SUBMIT</button>
         </form>
       </div>
     
